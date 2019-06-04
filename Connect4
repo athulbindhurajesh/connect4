@@ -1,0 +1,30 @@
+        int colToPlace = 0;
+        
+        for(int i = 0; i < grid.length; i++)
+        {
+            for(int j = 0; j < grid[0].length; j++)
+            {
+                if(grid[i][j] != null && !grid[i][j].equals(colorInitial))
+                {
+                    System.out.println("gggg");
+                    if(j+1 < grid[0].length && !grid[i][j+1].equals(colorInitial))
+                    {
+                        System.out.println("hhhh");
+                        if(j+2 < grid[0].length && grid[i][j+2]== null)
+                        {
+                            System.out.println("iiii");
+                            colToPlace = i;
+                        }
+                    }
+                }
+                else
+                {
+                    colToPlace = 3;
+                }
+            }
+        }
+
+        
+        placeCol(colToPlace,colorInitial,image1);  //plays in the specified col and fills the 2D array with the 2nd parameter String
+        
+        
